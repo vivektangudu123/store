@@ -28,11 +28,6 @@ class Command(BaseCommand):
         df = pd.read_csv(output_path)
 
         for _, row in df.iterrows():
-
-<<<<<<< HEAD
-
-=======
->>>>>>> b49751b (changed importing method)
             StoreStatus.objects.create(
                 store_id=row['store_id'],
                 status=row['status'],
