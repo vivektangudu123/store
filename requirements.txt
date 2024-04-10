@@ -1,0 +1,13 @@
+asgiref
+dj-database-url
+Django==3.2.1
+gunicorn==21.2.0
+psycopg2==2.9.7
+pytz
+sqlparse
+whitenoise
+requests
+pandas
+python-dotenv
+djangorestframework
+gdown

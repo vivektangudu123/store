@@ -1,0 +1,6 @@
+/db.sqlite3
+/reports_csv/*
+/store_status.csv
+/time_zone.csv
+/schedule.csv
+/db.sqlite3-journal
