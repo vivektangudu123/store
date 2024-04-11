@@ -40,12 +40,12 @@ def generate_csv_for_store(store_id):
         a,b=calculate_business_uptime_downtime_for_day(status, sche,cal_date_str)
         uptime_week+=a
         downtime_week+=b
-        print(a,b)
+        # print(a,b)
         # print("\n")
     uptime_week=round(uptime_week, 2)
     downtime_week=round( downtime_week, 2)
 
-    print(uptime_week,downtime_week)
+    # print(uptime_week,downtime_week)
     results=[]
     results.append(store_id)
     results.append(uptime_last_hour)
@@ -55,48 +55,3 @@ def generate_csv_for_store(store_id):
     results.append(downtime_last_day)
     results.append(downtime_week)
     return results
-    # Combine the data from the three tables if needed
-
-    # output_file_path = f'output/{store_id}_output.csv'
-    # with open(output_file_path, 'w', newline='') as csvfile:
-    #     fieldnames = ['store_id', 'status', 'timestamp_utc', 'timezone_str', 'day', 'start_time_local', 'end_time_local']
-    #     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
-    #     writer.writeheader()
-
-    #     for status_data in store_status_data:
-    #         writer.writerow({
-    #             'store_id': status_data.store_id,
-    #             'status': status_data.status,
-    #             'timestamp_utc': status_data.timestamp_utc,
-    #             'timezone_str': '',  # Placeholder for timezone_str from StoreTimezone table
-    #             'day': '',           # Placeholder for day from StoreSchedule table
-    #             'start_time_local': '',  # Placeholder for start_time_local from StoreSchedule table
-    #             'end_time_local': ''     # Placeholder for end_time_local from StoreSchedule table
-    #         })
-
-    #     # Write data from StoreTimezone table (if available)
-    #     for timezone_data in store_timezone_data:
-    #         writer.writerow({
-    #             'store_id': timezone_data.store_id,
-    #             'status': '',               # Placeholder for status from StoreStatus table
-    #             'timestamp_utc': '',        # Placeholder for timestamp_utc from StoreStatus table
-    #             'timezone_str': timezone_data.timezone_str,
-    #             'day': '',                  # Placeholder for day from StoreSchedule table
-    #             'start_time_local': '',     # Placeholder for start_time_local from StoreSchedule table
-    #             'end_time_local': ''        # Placeholder for end_time_local from StoreSchedule table
-    #         })
-
-    #     # Write data from StoreSchedule table (if available)
-    #     for schedule_data in store_schedule_data:
-    #         writer.writerow({
-    #             'store_id': schedule_data.store_id,
-    #             'status': '',               # Placeholder for status from StoreStatus table
-    #             'timestamp_utc': '',        # Placeholder for timestamp_utc from StoreStatus table
-    #             'timezone_str': '',         # Placeholder for timezone_str from StoreTimezone table
-    #             'day': schedule_data.day,
-    #             'start_time_local': schedule_data.start_time_local,
-    #             'end_time_local': schedule_data.end_time_local
-    #         })
-
-    # return output_file_path

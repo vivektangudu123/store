@@ -9,8 +9,7 @@ import secrets
 from django.conf import settings
 from myapp.utils import generate_csv_for_store
 from django.http import HttpResponse
-import pandas as pd
-
+from django.http import JsonResponse
 
 def import_store_status(file_path):
     file_path = '/Users/vivek/Downloads/store_status.csv'
@@ -65,16 +64,6 @@ def generate_report_csv(report_data, report):
     
     report.status = 1
     report.save()
-
-@api_view(['GET'])
-def getRoute(request):
-    routes = [
-        'GET /insert',
-        'GET /trigger_report',
-        'GET /get_report'
-    ]
-    return JsonResponse({'routes': routes})
-
 def insert_data(request):
     time_zone_csv=os.getenv('time_zone_csv')
     # print(time_zone_csv)
@@ -100,6 +89,31 @@ def insert_data(request):
         return JsonResponse({'Success':True})
     else:
         return JsonResponse({'Success':False})
+    
+def generate_report(unique_store_ids, reportid):
+    report_data = []
+    i = 0
+    for store in unique_store_ids:
+        if i > 150:
+            break
+        store_id_str = str(store['store_id'])
+        report_data.append(generate_csv_for_store(store_id_str))
+        i += 1
+    generate_report_csv(report_data, reportid)
+    report = Report.objects.get(reportid=reportid)
+    report.status = 1
+    report.save()
+    
+@api_view(['GET'])
+def getRoute(request):
+    routes = [
+        'GET /insert',
+        'GET /trigger_report',
+        'GET /get_report'
+    ]
+    return JsonResponse({'routes': routes})
+
+
     # return JsonResponse({'Success':True})
 
 
@@ -123,6 +137,7 @@ def trigger_report(request):
         report.status=1
         return JsonResponse({"report_id": report.reportid})
 
+
 @api_view(['GET'])
 def getReport(request, pk):
     try:
@@ -143,21 +158,7 @@ def getReport(request, pk):
                 return response
             else:
                 return Response(status=404, data={"error": "Report file not found"})
-            report_file_path = os.path.join(settings.MEDIA_ROOT, report.report_url.name)
-            if os.path.exists(report_file_path):
-                with open(report_file_path, 'r', newline='') as csvfile:
-                    response = HttpResponse(content_type='text/csv')
-                    # response['Content-Disposition'] = 'attachment; filename="data.csv"'
 
-                    csv_reader = csv.reader(csvfile)
-                    writer = csv.writer(response)
-                    for row in csv_reader:
-                        writer.writerow(row)
-
-                # json_data = df.to_json(orient='records')
-                return response
-            else:
-                return Response(status=404, data={"error": "Report file not found"})
         else:
             return Response(status=200, data={"status": "Running"})
     except Report.DoesNotExist:
