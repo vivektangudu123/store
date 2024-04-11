@@ -26,8 +26,10 @@ class Command(BaseCommand):
         gdown.download(url, output_path, quiet=False)
 
         df = pd.read_csv(output_path)
-
+        i=0
         for _, row in df.iterrows():
+            if(i>10000):
+                break
             StoreStatus.objects.create(
                 store_id=row['store_id'],
                 status=row['status'],
