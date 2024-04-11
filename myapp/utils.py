@@ -40,12 +40,9 @@ def generate_csv_for_store(store_id):
         a,b=calculate_business_uptime_downtime_for_day(status, sche,cal_date_str)
         uptime_week+=a
         downtime_week+=b
-        # print(a,b)
-        # print("\n")
     uptime_week=round(uptime_week, 2)
     downtime_week=round( downtime_week, 2)
 
-    # print(uptime_week,downtime_week)
     results=[]
     results.append(store_id)
     results.append(uptime_last_hour)
@@ -54,5 +51,5 @@ def generate_csv_for_store(store_id):
     results.append(downtime_last_hour)
     results.append(downtime_last_day)
     results.append(downtime_week)
-    print(sche)
+
     return results
