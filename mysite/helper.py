@@ -126,7 +126,7 @@ def trigger_report(request):
         report_data=[]
         i=0
         for store in unique_store_ids:
-            if(i>150):
+            if(i>7):
                 break
             store_id_str = str(store['store_id'])
             print(store_id_str)
