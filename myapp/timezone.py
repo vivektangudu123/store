@@ -4,7 +4,6 @@ def get_timezone(store_id):
     store_timezone_data = StoreTimezone.objects.filter(store_id=store_id)
     dff = list(store_timezone_data.values())
     df = pd.DataFrame(dff)
-    # print(len(df))
     if(len(df)==0):
         return "America/Chicago"
     else:

@@ -26,47 +26,57 @@ class Command(BaseCommand):
         gdown.download(url, output_path, quiet=False)
 
         df = pd.read_csv(output_path)
-        i=0
-        for _, row in df.iterrows():
-            if(i>2000):
-                break
-            StoreStatus.objects.create(
+        # Assuming 2000 is the maximum number of records you want to import
+        # df = df.iloc[:2000]
+        
+        store_status_records = [
+            StoreStatus(
                 store_id=row['store_id'],
                 status=row['status'],
                 timestamp_utc=row['timestamp_utc']
             )
-            i=i+1
+            for _, row in df.iterrows()
+        ]
+        
+        StoreStatus.objects.bulk_create(store_status_records)
 
         self.stdout.write(self.style.SUCCESS('StoreStatus data imported successfully.'))
 
     def import_store_timezone(self):
-        
         url = 'https://drive.google.com/uc?export=download&id=101P9quxHoMZMZCVWQ5o-shonk2lgK1-o'
         output_path = 'time_zone.csv'
         gdown.download(url, output_path, quiet=False)
         df = pd.read_csv(output_path)
 
-            
-        for _, row in df.iterrows():
-            StoreTimezone.objects.create(
+        store_timezone_records = [
+            StoreTimezone(
                 store_id=row['store_id'],
                 timezone_str=row['timezone_str']
             )
+            for _, row in df.iterrows()
+        ]
+        
+        StoreTimezone.objects.bulk_create(store_timezone_records)
+
         self.stdout.write(self.style.SUCCESS('Time_zone data imported successfully.'))
 
     def import_store_schedule(self):
-        
         url = 'https://drive.google.com/uc?export=download&id=1va1X3ydSh-0Rt1hsy2QSnHRA4w57PcXg'
         output_path = 'schedule.csv'
         gdown.download(url, output_path, quiet=False)
         df = pd.read_csv(output_path)
 
-        for  _,row in df.iterrows():
-            StoreSchedule.objects.create(
+        store_schedule_records = [
+            StoreSchedule(
                 store_id=row['store_id'],
                 day=row['day'],
                 start_time_local=row['start_time_local'],
                 end_time_local=row['end_time_local']
             )
+            for _, row in df.iterrows()
+        ]
+        
+        StoreSchedule.objects.bulk_create(store_schedule_records)
+
         self.stdout.write(self.style.SUCCESS('Schedule data imported successfully.'))
         self.stdout.write(self.style.SUCCESS('Data imported successfully.'))

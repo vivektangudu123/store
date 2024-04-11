@@ -18,14 +18,11 @@ def calculate_business_uptime_downtime_for_day(observations, business_hours,max_
     total_uptime = 0
     total_downtime = 0
     last_observation_time = None
-    # print(observations)
     filtered_observations=filter_by_date(observations,max_date)
     filtered_observations.sort(key=lambda obs: obs["timestamp_utc"])
     max_date_obj = parse_timestamp(max_date)
     weekday = max_date_obj.weekday()
     menu_hours = business_hours[weekday]
-    # print("Menu Hours:")
-    # print(menu_hours)
     opening_time = datetime.strptime(menu_hours[1], '%H:%M:%S').time()
     closing_time = datetime.strptime(menu_hours[2], '%H:%M:%S').time()
     

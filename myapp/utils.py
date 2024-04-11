@@ -54,4 +54,5 @@ def generate_csv_for_store(store_id):
     results.append(downtime_last_hour)
     results.append(downtime_last_day)
     results.append(downtime_week)
+    print(sche)
     return results

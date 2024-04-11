@@ -133,6 +133,7 @@ def trigger_report(request):
             report_data.append(generate_csv_for_store(store_id_str))
             i=i+1
         print(report.reportid)
+        print()
         generate_report_csv(report_data,report)
         report.status=1
         return JsonResponse({"report_id": report.reportid})
