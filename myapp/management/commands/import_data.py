@@ -28,7 +28,7 @@ class Command(BaseCommand):
         df = pd.read_csv(output_path)
         i=0
         for _, row in df.iterrows():
-            if(i>10000):
+            if(i>1000):
                 break
             StoreStatus.objects.create(
                 store_id=row['store_id'],
