@@ -81,8 +81,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 if not DEBUG:
     DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "databse-1",
+            "PASSWORD": "12345678",
+            "HOST": "database-1.c7a44gsscjab.eu-north-1.rds.amazonaws.com",  
+            "PORT": "5432",  
+        }
+    }
 
 
 else:
