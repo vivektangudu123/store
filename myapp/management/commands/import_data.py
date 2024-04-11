@@ -35,6 +35,7 @@ class Command(BaseCommand):
                 status=row['status'],
                 timestamp_utc=row['timestamp_utc']
             )
+            i=i+1
 
         self.stdout.write(self.style.SUCCESS('StoreStatus data imported successfully.'))
 
