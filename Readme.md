@@ -9,7 +9,7 @@ Video link:
 [https://www.loom.com/share/5c8e80e0dca549e2964bd17da744244f?sid=be6cc7e1-7cca-4d33-8d29-2a27cd9f8d3a](https://www.loom.com/share/5c8e80e0dca549e2964bd17da744244f?sid=be6cc7e1-7cca-4d33-8d29-2a27cd9f8d3a)
 
 Vivek Tangudu
-**Email:** vivektangudu@outlook.com
+**Email:** vivektangudu@outlook.com 
 **Phone**: +91 9441354555
 **LinkedIn**: [linkedin.com/in/vivektangudu](http://linkedin.com/in/vivektangudu)
 
@@ -83,12 +83,12 @@ Similarly, implemented to retrieve the time_zone, business hours using the store
     - Update the last observation time and status for the next iteration.
 9. **Handle the Last Observation**: If the last status within the past hour is "active" (meaning the business was up until the closing time), calculate the uptime until the end of the past hour. Otherwise, calculate the downtime until the end of the past hour.
 
-## Future Scope
+# Future Scope
 
 - We can create a realtime ETL pipeline to update the database for every hour.
 - Adding asynchronous functions to run in the background. (Threading)
 
-React JS deployment 
+#React JS deployment 
 
 A react app: [https://library-odfb.onrender.com/](https://library-odfb.onrender.com/) 
 
