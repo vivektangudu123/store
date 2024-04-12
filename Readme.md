@@ -8,15 +8,15 @@ Video link:
 
 [https://www.loom.com/share/5c8e80e0dca549e2964bd17da744244f?sid=be6cc7e1-7cca-4d33-8d29-2a27cd9f8d3a](https://www.loom.com/share/5c8e80e0dca549e2964bd17da744244f?sid=be6cc7e1-7cca-4d33-8d29-2a27cd9f8d3a)
 
-Vivek Tangudu
-**Email:** vivektangudu@outlook.com ---
+Vivek Tangudu\
+**Email:** vivektangudu@outlook.com\
 **Phone**: +91 9441354555
 **LinkedIn**: [linkedin.com/in/vivektangudu](http://linkedin.com/in/vivektangudu)
 Resume: https://drive.google.com/file/d/1gATYbPiR1fEuOw77wdH_nuVlmsWGePLy/view?usp=share_link
 
 ## About Me
 
-                         Hi! I'm Vivek from the International Institute of Information Technology in Bangalore. I'm currently in my 4th year, pursuing an integrated M.Tech degree in Computer Science and Engineering.
+Hi! I'm Vivek from the International Institute of Information Technology in Bangalore. I'm currently in my 4th year, pursuing an integrated M.Tech degree in Computer Science and Engineering.
 
 [GitHub - vivektangudu123/BookHive-Manager](https://github.com/vivektangudu123/BookHive-Manager)
 
