@@ -10,8 +10,8 @@ Video link:
 
 Vivek Tangudu\
 **Email:** vivektangudu@outlook.com\
-**Phone**: +91 9441354555
-**LinkedIn**: [linkedin.com/in/vivektangudu](http://linkedin.com/in/vivektangudu)
+**Phone**: +91 9441354555\
+**LinkedIn**: [linkedin.com/in/vivektangudu](http://linkedin.com/in/vivektangudu)\
 Resume: https://drive.google.com/file/d/1gATYbPiR1fEuOw77wdH_nuVlmsWGePLy/view?usp=share_link
 
 ## About Me
@@ -19,7 +19,6 @@ Resume: https://drive.google.com/file/d/1gATYbPiR1fEuOw77wdH_nuVlmsWGePLy/view?u
 Hi! I'm Vivek from the International Institute of Information Technology in Bangalore. I'm currently in my 4th year, pursuing an integrated M.Tech degree in Computer Science and Engineering.
 
 [GitHub - vivektangudu123/BookHive-Manager](https://github.com/vivektangudu123/BookHive-Manager)
-
 One of my notable projects is the development of a robust Library Management System using the MERN stack. Leveraging MongoDB, Express.js, React, and Node.js, I implemented features such as book addition, issuance management, and issue editing. I emphasized deployment efficiency by utilizing Docker for containerization and Kubernetes for orchestration, showcasing my proficiency in full-stack programming and containerization technologies
 
 In another project, "Why So Harsh," I devised an advanced model for comment categorization through tone detection. Achieving a remarkable accuracy rate of 97% through systematic tuning and experimentation with diverse models, I demonstrated my proficiency in machine learning, natural language processing, and data science.
