@@ -10,8 +10,11 @@ Video link:
 
 Vivek Tangudu
 **Email:** vivektangudu@outlook.com 
+---
 **Phone**: +91 9441354555
+---
 **LinkedIn**: [linkedin.com/in/vivektangudu](http://linkedin.com/in/vivektangudu)
+---
 
 Resume: https://drive.google.com/file/d/1gATYbPiR1fEuOw77wdH_nuVlmsWGePLy/view?usp=share_link
 
