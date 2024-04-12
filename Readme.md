@@ -86,7 +86,7 @@ Similarly, implemented to retrieve the time_zone, business hours using the store
 - We can create a realtime ETL pipeline to update the database for every hour.
 - Adding asynchronous functions to run in the background. (Threading)
 
-#React JS deployment 
+**React JS deployment**
 
 A react app: [https://library-odfb.onrender.com/](https://library-odfb.onrender.com/) 
 
