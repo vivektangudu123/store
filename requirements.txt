@@ -11,3 +11,4 @@ pandas
 python-dotenv
 djangorestframework
 gdown
+celery

@@ -120,7 +120,7 @@ class Command(BaseCommand):
         gdown.download(url, output_path, quiet=False)
 
         df = pd.read_csv(output_path)
-        # df = df.iloc[:2000]  # Assuming 2000 is the maximum number of records you want to import
+        df = df.iloc[:2000]  # Assuming 2000 is the maximum number of records you want to import
 
         self.batch_import(StoreStatus, df)
 

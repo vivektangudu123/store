@@ -6,7 +6,7 @@ from .schedule import get_schedule
 from .timezone import get_timezone
 from .change_time import change_time
 from .cal import *
-
+from concurrent.futures import ThreadPoolExecutor
 def generate_csv_for_store(store_id):
     # print(store_id)
     store_status_data = StoreStatus.objects.filter(store_id=store_id)
@@ -53,3 +53,4 @@ def generate_csv_for_store(store_id):
     results.append(downtime_week)
 
     return results
+
